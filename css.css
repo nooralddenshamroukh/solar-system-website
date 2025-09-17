@@ -1,0 +1,979 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body{
+
+
+height: 100vh;
+background-image: 
+linear-gradient(to right,  #01012e , #240019);
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+}
+
+
+.title{
+
+color: white;
+font-size: 25px;
+font-weight: 700;
+text-transform: uppercase;
+font-style: italic;
+text-shadow:     /*text-shadow: offset-x  offset-y  blur-radius  color;*/
+2px 2px 5px blue,
+3px 3px 7px black;
+position: absolute;
+top: 34px;
+left: 25px;
+
+
+
+
+
+
+}
+
+
+
+
+
+section{
+
+background-image: url(stars1.png);
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+ul li a{
+    text-decoration: none;
+color: white;
+font-size: 35px;
+font-weight: 350;
+width: fit-content;
+background-color: darkblue;
+border-radius: 27px;
+width: 160px;
+padding: 6px 15px;
+text-align: center;
+display: inline-block;
+transition: 0.5s;
+text-transform: uppercase;
+
+}
+
+ul li{
+
+margin: 15px 0;
+
+
+
+}
+
+ul{
+
+    text-align: center;
+list-style: none;
+text-decoration: none;
+transition: all;
+
+
+
+}
+
+ul:hover li a{/* that means the hover effect will happened when we hover on anyplace on the ul {BUT} the effect will be applied only on a elements*/
+
+opacity: 0;
+
+}
+
+
+ul li a:hover{/* that means the hover effect will only applied  on the a element that we hovered on*/
+
+transform: scale(1.5);
+background-color: darkmagenta;
+opacity: 1;/* IMPORTANT !! >>>> for this effect work correctly  it must be written after the last hover on the whole list */
+
+
+}
+
+
+ul li::after{
+
+content:attr(data-text);
+color: white;
+position: absolute;
+top: 50%;
+left: 50%;
+transform:translate(-50%,-50%);
+font-weight: 900;
+font-size: 80px;
+text-transform: uppercase;
+opacity: 0;
+pointer-events: none; /*that means nothings happens when the pointer point on them, meaning nallify any 
+mous effect when point on them like hover or auto
+ (in another words make them invisible for the mouse)*/
+
+letter-spacing: 50px;
+transition: 0.5s;
+
+}
+
+
+ul li:hover::after{/* meaning hover when points on the list elements but the effect applied on the (li::after)-elements*/
+    opacity: 0.5;
+letter-spacing: 5px;
+
+}
+
+
+ul .ea:hover::after{
+
+content: "EARTH";
+color: white;
+position: absolute;
+top: 60%;
+left: 50%;
+transform:translate(-50%,-50%);
+font-weight: 900;
+font-size: 80px;
+text-transform: uppercase;
+ opacity: 0.5;
+letter-spacing: 5px;
+
+}
+ul .ju:hover::after{
+
+content: "JUPITER";
+color: white;
+position: absolute;
+top: 35%;
+left: 50%;
+transform:translate(-50%,-50%);
+font-weight: 900;
+font-size: 80px;
+text-transform: uppercase;
+ opacity: 0.5;
+letter-spacing: 5px;
+
+}
+
+ul .ma:hover::after{
+
+content: "MARS";
+color: white;
+position: absolute;
+top: 20%;
+left: 50%;
+transform:translate(-50%,-50%);
+font-weight: 900;
+font-size: 80px;
+text-transform: uppercase;
+ opacity: 0.5;
+letter-spacing: 5px;
+
+}
+
+
+
+
+
+
+
+ul li::before{
+
+content: " ";
+background-color: white;
+position: absolute;
+width:150px;
+height: 150px;
+border-radius: 50%;
+
+top: 70%;
+left: 50%;
+transform:translate(-50%,-50%);
+opacity: 0;
+transition: 0.5s;
+box-shadow: 
+0 0 60px 60px orange, /*box-shadow: <offset-x> <offset-y> <blur-radius> <spread-radius> <color>;*/
+0 0 80px 90px purple;
+pointer-events: none;
+
+transition: 0.5s;
+
+
+}
+
+
+
+ul .sun:hover::before{
+opacity: 0.5;
+ scale: 4.5; 
+top: 80%;
+left: 63.5%;
+transform:translate(-50%,-50%);
+box-shadow: 
+0 0 60px 60px orange, 
+0 0 80px 90px yellow;
+ 
+}
+
+
+ul .me:hover::before{
+opacity: 0.5;
+ scale: 1.5; 
+top: 50%;
+left: 25%;
+transform:translate(-50%,-50%);
+box-shadow: 
+0 0 60px 60px rgb(119, 119, 122), 
+0 0 80px 90px rgb(108, 108, 109);
+ 
+
+    
+}
+ul .ve:hover::before{
+opacity: 0.5;
+ scale: 2; 
+top: 45%;
+left: 80%;
+transform:translate(-50%,-50%);
+
+ box-shadow: 
+0 0 40px 40px gold, 
+0 0 60px 100px brown;
+
+
+    
+}
+
+
+
+
+
+ul .ea:hover::before{
+opacity: 0.5;
+ scale: 2.5; 
+top: 80%;
+left: 30%;
+transform:translate(-50%,-50%);
+
+ box-shadow: 
+0 0 60px 40px rgb(11, 8, 197),
+0 0 80px 100px rgb(53, 223, 6);
+    
+}
+
+
+ul .ma:hover::before{
+opacity: 0.5;
+ scale: 1.5; 
+top: 80%;
+left: 52.55%;
+transform:translate(-50%,-50%);
+
+
+ box-shadow: 
+0 0 60px 60px rgb(224, 2, 47), 
+0 0 80px 90px rgb(225, 5, 5);
+
+
+
+
+    
+}
+
+
+
+
+
+
+ul .ju:hover::before{
+
+opacity: 0.5;
+ scale: 4.5; 
+top: 85%;
+left: 92%;
+transform:translate(-50%,-50%);
+
+box-shadow: 
+0 0 40px 30px rgba(255, 255, 0, 0.77), 
+0 0 40px 70px brown,
+0 0 40px 110px red;
+
+
+}
+
+
+
+
+
+ul .sa:hover::before{
+
+opacity: 0.5;
+ scale: 4; 
+top: 77%;
+left: 37.43%;
+transform:translate(-50%,-50%);
+box-shadow: 
+0 0 40px 10px yellow, 
+0 0 70px 65px brown,
+0 0 80px 120px gray;
+
+
+}
+ul .ur:hover::before{
+
+opacity: 0.5;
+ scale: 3.5; 
+top: 66%;
+left: 91.5%;
+transform:translate(-50%,-50%);
+box-shadow: 
+0 0 60px 60px rgb(6, 230, 215), 
+0 0 80px 90px rgb(12, 155, 124);
+
+
+}
+ul .ne:hover::before{
+
+opacity: 0.5;
+ scale: 3; 
+top: 85%;
+left: 30%;
+transform:translate(-50%,-50%);
+box-shadow: 
+0 0 60px 60px rgb(10, 6, 218), 
+0 0 80px 90px rgb(17, 20, 212);
+
+
+}
+
+
+
+
+
+@media (min-width:0px) and (max-width:609.99px){
+
+
+.title{
+
+color: white;
+font-size: 12px;
+width: 80px;
+height: auto;
+font-weight: 700;
+text-transform: uppercase;
+font-style: italic;
+text-shadow:     /*text-shadow: offset-x  offset-y  blur-radius  color;*/
+2px 2px 5px blue,
+3px 3px 7px black;
+position: absolute;
+top: 34px;
+left: 25px;
+
+
+}
+
+
+
+
+ul .sun:hover::before{
+opacity: 0.5;
+ scale: 3; 
+top: 70%;
+left: 77.5%;
+transform:translate(-50%,-50%);
+box-shadow: 
+0 0 60px 60px orange, 
+0 0 80px 90px yellow;
+ 
+}
+
+
+ul .me:hover::before{
+opacity: 0.5;
+ scale: 1.5; 
+top: 42%;
+left: 35%;
+transform:translate(-50%,-50%);
+box-shadow: 
+0 0 60px 60px rgb(119, 119, 122), 
+0 0 80px 90px rgb(108, 108, 109);
+ 
+
+    
+}
+ul .ve:hover::before{
+opacity: 0.5;
+ scale: 1.5; 
+top: 45%;
+left: 80%;
+transform:translate(-50%,-50%);
+
+ box-shadow: 
+0 0 40px 40px gold, 
+0 0 60px 100px brown;
+
+
+    
+}
+
+
+
+
+
+ul .ea:hover::before{
+opacity: 0.5;
+ scale: 1.5; 
+top: 80%;
+left: 30%;
+transform:translate(-50%,-50%);
+
+ box-shadow: 
+0 0 60px 40px rgb(11, 8, 197),
+0 0 80px 100px rgb(53, 223, 6);
+    
+}
+
+
+ul .ma:hover::before{
+opacity: 0.5;
+ scale: 1.3; 
+top: 80%;
+left: 54%;
+transform:translate(-50%,-50%);
+
+
+ box-shadow: 
+0 0 60px 60px rgb(224, 2, 47), 
+0 0 80px 90px rgb(225, 5, 5);
+
+
+    
+}
+
+
+
+ul .ma:hover::after{
+
+content: "MARS";
+color: white;
+position: absolute;
+top: 30%;
+left: 50%;
+transform:translate(-50%,-50%);
+font-weight: 900;
+font-size: 80px;
+text-transform: uppercase;
+ opacity: 0.5;
+letter-spacing: 5px;
+
+}
+
+
+
+
+ul .ju:hover::before{
+
+opacity: 0.5;
+ scale: 3; 
+top: 75%;
+left: 92%;
+transform:translate(-50%,-50%);
+
+box-shadow: 
+0 0 40px 30px rgba(255, 255, 0, 0.77), 
+0 0 40px 70px brown,
+0 0 40px 110px red;
+
+
+}
+
+
+
+
+
+ul .sa:hover::before{
+
+opacity: 0.5;
+ scale: 3; 
+top: 77%;
+left: 52.43%;
+transform:translate(-50%,-50%);
+box-shadow: 
+0 0 40px 10px yellow, 
+0 0 70px 65px brown,
+0 0 80px 120px gray;
+
+
+}
+ul .ur:hover::before{
+
+opacity: 0.5;
+ scale: 2.5; 
+top: 66%;
+left: 91.5%;
+transform:translate(-50%,-50%);
+box-shadow: 
+0 0 60px 60px rgb(6, 230, 215), 
+0 0 80px 90px rgb(12, 155, 124);
+
+
+}
+ul .ne:hover::before{
+
+opacity: 0.5;
+ scale: 2; 
+top: 85%;
+left: 50%;
+transform:translate(-50%,-50%);
+box-shadow: 
+0 0 60px 60px rgb(10, 6, 218), 
+0 0 80px 90px rgb(17, 20, 212);
+
+
+}
+
+ul li a{
+    text-decoration: none;
+color: white;
+font-size: 25px;
+font-weight: 250;
+width: fit-content;
+background-color: darkblue;
+border-radius: 27px;
+width: 130px;
+padding: 6px 15px;
+text-align: center;
+display: inline-block;
+transition: 0.5s;
+text-transform: uppercase;
+
+}
+
+
+
+}
+
+
+
+
+@media (min-width:610px) and (max-width:1050px){
+
+
+.title{
+
+color: white;
+font-size: 15px;
+
+font-weight: 700;
+text-transform: uppercase;
+font-style: italic;
+text-shadow:     /*text-shadow: offset-x  offset-y  blur-radius  color;*/
+2px 2px 5px blue,
+3px 3px 7px black;
+position: absolute;
+top: 34px;
+left: 25px;
+
+
+}
+
+
+
+
+ul .sun:hover::before{
+opacity: 0.5;
+ scale: 3; 
+top: 70%;
+left: 72.5%;
+transform:translate(-50%,-50%);
+box-shadow: 
+0 0 60px 60px orange, 
+0 0 80px 90px yellow;
+ 
+}
+
+
+ul .me:hover::before{
+opacity: 0.5;
+ scale: 1.5; 
+top: 42%;
+left: 28%;
+transform:translate(-50%,-50%);
+box-shadow: 
+0 0 60px 60px rgb(119, 119, 122), 
+0 0 80px 90px rgb(108, 108, 109);
+ 
+
+    
+}
+ul .ve:hover::before{
+opacity: 0.5;
+ scale: 1.5; 
+top: 45%;
+left: 80%;
+transform:translate(-50%,-50%);
+
+ box-shadow: 
+0 0 40px 40px gold, 
+0 0 60px 100px brown;
+
+
+    
+}
+
+
+
+
+
+ul .ea:hover::before{
+opacity: 0.5;
+ scale: 1.5; 
+top: 80%;
+left: 30%;
+transform:translate(-50%,-50%);
+
+ box-shadow: 
+0 0 60px 40px rgb(11, 8, 197),
+0 0 80px 100px rgb(53, 223, 6);
+    
+}
+
+
+ul .ma:hover::before{
+opacity: 0.5;
+ scale: 1.3; 
+top: 80%;
+left: 52%;
+transform:translate(-50%,-50%);
+
+
+ box-shadow: 
+0 0 60px 60px rgb(224, 2, 47), 
+0 0 80px 90px rgb(225, 5, 5);
+
+
+    
+}
+
+
+
+ul .ma:hover::after{
+
+content: "MARS";
+color: white;
+position: absolute;
+top: 30%;
+left: 50%;
+transform:translate(-50%,-50%);
+font-weight: 900;
+font-size: 80px;
+text-transform: uppercase;
+ opacity: 0.5;
+letter-spacing: 5px;
+
+}
+
+
+
+
+ul .ju:hover::before{
+
+opacity: 0.5;
+ scale: 3; 
+top: 75%;
+left: 92%;
+transform:translate(-50%,-50%);
+
+box-shadow: 
+0 0 40px 30px rgba(255, 255, 0, 0.77), 
+0 0 40px 70px brown,
+0 0 40px 110px red;
+
+
+}
+
+
+
+
+
+ul .sa:hover::before{
+
+opacity: 0.5;
+ scale: 3; 
+top: 77%;
+left: 41.43%;
+transform:translate(-50%,-50%);
+box-shadow: 
+0 0 40px 10px yellow, 
+0 0 70px 65px brown,
+0 0 80px 120px gray;
+
+
+}
+ul .ur:hover::before{
+
+opacity: 0.5;
+ scale: 2.5; 
+top: 66%;
+left: 87.5%;
+transform:translate(-50%,-50%);
+box-shadow: 
+0 0 60px 60px rgb(6, 230, 215), 
+0 0 80px 90px rgb(12, 155, 124);
+
+
+}
+ul .ne:hover::before{
+
+opacity: 0.5;
+ scale: 2; 
+top: 85%;
+left: 30%;
+transform:translate(-50%,-50%);
+box-shadow: 
+0 0 60px 60px rgb(10, 6, 218), 
+0 0 80px 90px rgb(17, 20, 212);
+
+
+}
+
+ul li a{
+    text-decoration: none;
+color: white;
+font-size: 27px;
+font-weight: 350;
+width: fit-content;
+background-color: darkblue;
+border-radius: 27px;
+width: 160px;
+padding: 6px 15px;
+text-align: center;
+display: inline-block;
+transition: 0.5s;
+text-transform: uppercase;
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+@media (min-width:1051px) and (max-width:1400px){
+
+
+.title{
+
+color: white;
+font-size: 20px;
+
+font-weight: 700;
+text-transform: uppercase;
+font-style: italic;
+text-shadow:     /*text-shadow: offset-x  offset-y  blur-radius  color;*/
+2px 2px 5px blue,
+3px 3px 7px black;
+position: absolute;
+top: 34px;
+left: 25px;
+
+
+}
+
+
+
+
+ul .sun:hover::before{
+opacity: 0.5;
+ scale: 3; 
+top: 70%;
+left: 62.5%;
+transform:translate(-50%,-50%);
+box-shadow: 
+0 0 60px 60px orange, 
+0 0 80px 90px yellow;
+ 
+}
+
+
+ul .me:hover::before{
+opacity: 0.5;
+ scale: 1.5; 
+top: 42%;
+left: 28%;
+transform:translate(-50%,-50%);
+box-shadow: 
+0 0 60px 60px rgb(119, 119, 122), 
+0 0 80px 90px rgb(108, 108, 109);
+ 
+
+    
+}
+ul .ve:hover::before{
+opacity: 0.5;
+ scale: 1.5; 
+top: 45%;
+left: 80%;
+transform:translate(-50%,-50%);
+
+ box-shadow: 
+0 0 40px 40px gold, 
+0 0 60px 100px brown;
+
+
+    
+}
+
+
+
+
+
+ul .ea:hover::before{
+opacity: 0.5;
+ scale: 1.5; 
+top: 80%;
+left: 30%;
+transform:translate(-50%,-50%);
+
+ box-shadow: 
+0 0 60px 40px rgb(11, 8, 197),
+0 0 80px 100px rgb(53, 223, 6);
+    
+}
+
+
+ul .ma:hover::before{
+opacity: 0.5;
+ scale: 1.3; 
+top: 80%;
+left: 52%;
+transform:translate(-50%,-50%);
+
+
+ box-shadow: 
+0 0 60px 60px rgb(224, 2, 47), 
+0 0 80px 90px rgb(225, 5, 5);
+
+
+    
+}
+
+
+
+ul .ma:hover::after{
+
+content: "MARS";
+color: white;
+position: absolute;
+top: 30%;
+left: 50%;
+transform:translate(-50%,-50%);
+font-weight: 900;
+font-size: 80px;
+text-transform: uppercase;
+ opacity: 0.5;
+letter-spacing: 5px;
+
+}
+
+
+
+
+ul .ju:hover::before{
+
+opacity: 0.5;
+ scale: 3; 
+top: 75%;
+left: 92%;
+transform:translate(-50%,-50%);
+
+box-shadow: 
+0 0 40px 30px rgba(255, 255, 0, 0.77), 
+0 0 40px 70px brown,
+0 0 40px 110px red;
+
+
+}
+
+
+
+
+
+ul .sa:hover::before{
+
+opacity: 0.5;
+ scale: 3; 
+top: 77%;
+left: 41.43%;
+transform:translate(-50%,-50%);
+box-shadow: 
+0 0 40px 10px yellow, 
+0 0 70px 65px brown,
+0 0 80px 120px gray;
+
+
+}
+ul .ur:hover::before{
+
+opacity: 0.5;
+ scale: 2.5; 
+top: 66%;
+left: 87.5%;
+transform:translate(-50%,-50%);
+box-shadow: 
+0 0 60px 60px rgb(6, 230, 215), 
+0 0 80px 90px rgb(12, 155, 124);
+
+
+}
+ul .ne:hover::before{
+
+opacity: 0.5;
+ scale: 2; 
+top: 75%;
+left: 30%;
+transform:translate(-50%,-50%);
+box-shadow: 
+0 0 60px 60px rgb(10, 6, 218), 
+0 0 80px 90px rgb(17, 20, 212);
+
+
+}
+
+ul li a{
+    text-decoration: none;
+color: white;
+font-size: 27px;
+font-weight: 350;
+width: fit-content;
+background-color: darkblue;
+border-radius: 27px;
+width: 160px;
+padding: 6px 15px;
+text-align: center;
+display: inline-block;
+transition: 0.5s;
+text-transform: uppercase;
+
+}
+
+
+
+}
